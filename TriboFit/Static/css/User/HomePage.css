@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+main {
+    section {
+        margin-left: 290px;
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                font-size: 50px;
+
+                img {
+                    width: 75px;
+                    height: 75px;
+                }
+            }
+
+            hr {
+                width: 500px;
+            }
+
+            #Notification {
+                position: relative;
+                bottom: 70px;
+                right: 22px;
+                align-self: flex-end;
+            }
+        
+
+        }    
+    }
+}
