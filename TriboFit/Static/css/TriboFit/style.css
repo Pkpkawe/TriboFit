@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+:root {
+    --Cor_1: #1A1A1A;
+    --Cor_2: #0E8F15;
+    --Cor_3: #29C31B;
+    --Cor_4: #40D232;
+    --Cor_5: #5ED653;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/static/img/Fundos/Tela_Cadastro&Login/Fundo_Abacaxi.jpg); 
+    background-size: 100%; 
+    height: 100vh; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #00000066;
+    width: 604px;
+    height: 561px;
+    border: solid 0;
+    border-radius: 10px;
+    
+    img {
+        position: relative;
+        bottom: 70px;
+        width: 120px;
+        align-self: center;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+
+        #Login_e_Cadastro {
+            display: flex;
+            align-self: center;
+            position: relative;
+            bottom: 70px;
+            background-color: white;
+            margin-top: 15px;
+            width: 370px;
+            height: 64px;
+            border: solid 2px black;
+            border-radius: 50px;
+
+            #Cadastro {
+                display: flex;
+                align-self: flex-start;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--Cor_3);
+                width: 185px;
+                height: 100%;
+                border: solid 0;
+                border-radius: 50px;
+                font-size: 1.5em;
+                font-weight: bold;
+                color: white;
+            }
+
+            #Login {
+                display: flex;
+                align-self: flex-end;
+                align-items: center;
+                justify-content: center;
+                width: 185px;
+                height: 100%;
+                border: solid 0;
+                border-radius: 50px;
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+        }
+
+    
+    }
+}

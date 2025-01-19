@@ -2,8 +2,6 @@
 
 main {
     section {
-        margin-left: 290px;
-
         header {
             display: flex;
             flex-direction: column;
