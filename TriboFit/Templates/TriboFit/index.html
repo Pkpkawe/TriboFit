@@ -11,16 +11,39 @@
 <body>
     <main>
         <img src="{% static 'img/Logo.png' %}" alt="Logo">
-
+        
         <section>
             <div id="Login_e_Cadastro">
-                <div id="Cadastro">
-                    <p>Cadastrar</p>
-                </div>
-                <div id="Login">
-                    <p>Entrar</p>
-                </div>
+                <button id="Cadastrar" class="Botões_Cadastro_e_Login">Cadastrar</button>
+                <button id="Entrar" class="Botões_Cadastro_e_Login">Entrar</button>
+                <script src="{% static 'js/TriboFit/Botão_Cadastro&Login.js' %}"></script>
             </div>
+
+            <form id="Form_Cadastro"  class="Forms">
+                <div class="input">
+                    <input type="text" name="name_cadastro" id="name_cadastro" class="name" placeholder="Nome" required maxlength="100">
+                    <input type="email" name="email_cadastro" id="email_cadastro" class="email" placeholder="Email" required>
+                    <input type="password" name="password_cadastro"  id="password_cadastro" class="password" placeholder="Senha" required minlength="8">
+                    <input type="password" name="confirm_password_cadastro"  id="confirm_password_cadastro" class="confirm_password" placeholder="Confirmar Senha" required minlength="8">
+                </div>
+
+                <div class="button">
+                    <button class="submit" id="submit_cadastro" type="submit">Cadastrar</button>
+                    <script src="{% static 'js/TriboFit/script_cadastro.js' %}"></script>
+                </div>
+            </form>
+
+            <form id="Form_Login" class="Forms">
+                <div class="input">
+                    <input type="email" name="email_login" id="email_login" class="email" placeholder="Email" required>
+                    <input type="password" name="password_login" class="password" placeholder="Senha" required minlength="8">
+                </div>
+
+                <div class="button">
+                    <button class="submit" id="submit_login" type="submit">Entrar</button>
+                </div>
+            </form>
+
         </section>
         
     </main>
