@@ -19,7 +19,7 @@ from django.urls import path, include
 from .views import IndexHTML
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', IndexHTML, name="IndexHTML"),
+    path('admin/', admin.site.urls),
     path('User/', include('User.urls'))
 ]

@@ -36,11 +36,12 @@
             <form id="Form_Login" class="Forms">
                 <div class="input">
                     <input type="email" name="email_login" id="email_login" class="email" placeholder="Email" required>
-                    <input type="password" name="password_login" class="password" placeholder="Senha" required minlength="8">
+                    <input type="password" name="password_login" id="password_login" class="password" placeholder="Senha" required minlength="8">
                 </div>
-
+                
                 <div class="button">
                     <button class="submit" id="submit_login" type="submit">Entrar</button>
+                    <script src="{% static 'js/TriboFit/script_entrar.js' %}"></script>
                 </div>
             </form>
 

@@ -9,14 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('email_cadastro').value
             const password = document.getElementById('password_cadastro').value
             const confirm_password = document.getElementById('confirm_password_cadastro').value
-            const telephone = null
-            const date_birth = null
-
-            const data = {name, email, password, telephone, date_birth}
+            
+            const data = {name, email, password}
 
             if (password === confirm_password) {
                 try {
-                    const response = await fetch('/User/', {
+                    const response = await fetch('/User/Cadastrar/', {
                         method: 'POST',
                         headers: {'Content-Type': 'application/json'},
                         body: JSON.stringify(data),
