@@ -4,42 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/TriboFit/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/TriboFit/styleTriboFit.css' %}">
     <link rel="shortcut icon" href="{% static 'img/Logo_Icone.ico' %}" type="image/x-icon">
     <title>TriboFit</title>
 </head>
 <body>
-    <main>
-        <img src="{% static 'img/Logo.png' %}" alt="Logo">
+    <main> <!-- Conteúdo Principal -->
+        <img src="{% static 'img/Logo.png' %}" alt="Logo"> <!-- Logo do Site -->
         
-        <section>
+        <section> <!-- Seção do botão: Cadastrar e Entrar -->
             <div id="Login_e_Cadastro">
                 <button id="Cadastrar" class="Botões_Cadastro_e_Login">Cadastrar</button>
                 <button id="Entrar" class="Botões_Cadastro_e_Login">Entrar</button>
                 <script src="{% static 'js/TriboFit/Botão_Cadastro&Login.js' %}"></script>
             </div>
 
-            <form id="Form_Cadastro"  class="Forms">
-                <div class="input">
+            <form id="Form_Cadastro"  class="Forms"> <!-- Formulário Cadastrar -->
+                <div class="input"> <!-- Input do Cadastro -->
                     <input type="text" name="name_cadastro" id="name_cadastro" class="name" placeholder="Nome" required maxlength="100">
                     <input type="email" name="email_cadastro" id="email_cadastro" class="email" placeholder="Email" required>
                     <input type="password" name="password_cadastro"  id="password_cadastro" class="password" placeholder="Senha" required minlength="8">
                     <input type="password" name="confirm_password_cadastro"  id="confirm_password_cadastro" class="confirm_password" placeholder="Confirmar Senha" required minlength="8">
                 </div>
 
-                <div class="button">
+                <div class="button"> <!-- Botão de Enviar do Cadastro -->
                     <button class="submit" id="submit_cadastro" type="submit">Cadastrar</button>
                     <script src="{% static 'js/TriboFit/script_cadastro.js' %}"></script>
                 </div>
             </form>
 
-            <form id="Form_Login" class="Forms">
-                <div class="input">
+            <form id="Form_Login" class="Forms"> <!-- Formulário Entrar -->
+                <div class="input"> <!-- Input do Entrar -->
                     <input type="email" name="email_login" id="email_login" class="email" placeholder="Email" required>
                     <input type="password" name="password_login" id="password_login" class="password" placeholder="Senha" required minlength="8">
                 </div>
                 
-                <div class="button">
+                <div class="button"> <!-- Botão de Enviar do Entrar -->
                     <button class="submit" id="submit_login" type="submit">Entrar</button>
                     <script src="{% static 'js/TriboFit/script_entrar.js' %}"></script>
                 </div>

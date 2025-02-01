@@ -1,11 +1,224 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/User/SettingsPage.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/Logo_Icone.ico' %}" type="image/x-icon">
+    <title>TriboFit</title>
 </head>
 <body>
-    
+    {% include 'Componentes/NavUser.html' %}
+
+    <main id="main"> <!--Conteudo principal-->
+        <section id="conta"> <!--Conta - start--> 
+            <div class="titulo_container">
+                <img src="{% static 'img/Icones/Settings/Conta.png' %}" alt="Foto_Conta_png">
+                <h1>Conta</h1>
+            </div>
+            <div id="container-conta" class="containers"> <!--Container da conta-->
+
+                <div class="informações" id="informações_conta"> <!-- informacoes -->
+                    <div>
+                        <label for="Name"><strong>Nome:</strong></label>
+                        <input type="text" name="name">
+                    </div>
+                    <div>
+                        <label for="Email"><strong>Email:</strong></label>
+                        <input type="email" name="email" required min="8">
+                    </div>
+                    <div>
+                        <label for="Telephone"><strong>Telefone:</strong></label>
+                        <input type="tel" name="telephone">
+                    </div>
+                    <div>
+                        <label for="Date"><strong>Data de Nascimento:</strong></label>
+                        <input type="date">
+                    </div>
+
+                    <div id="type-account"> <!--Tipo de conta-->
+                        <p>Tipo de conta:</p>
+                        <div>
+                            <p>Normal</p>
+                        </div>
+                        <div>
+                            <p>Profissional</p>
+                        </div>
+                    </div> <!-- tipo de conta end -->
+
+                </div> <!-- informacoes -->
+
+            </div>  <!--Container da conta-->  
+
+        </section> <!--Conta - end-->
+
+        <section id="privacidade"> <!--Privacidade - start-->
+            <div class="titulo_container">
+                <img src="{% static 'img/Icones/Settings/Privacidade.png' %}" alt="Foto_Privacidade_png">
+                <h2>Privacidade</h2>
+            </div>
+            <div id="container-privacidade" class="containers"> <!--Container da Privacidade-->
+                <div class="informações" id="informações_privacidade">
+                    <div id="dados">
+                        <div class="funções_informações">
+                            <h3>Gerenciamento de Dados</h3>
+                            <img src="" alt="">
+                        </div>
+                        <p>Controle quais dados devem ser usados para melhorar sua experiência.</p>
+                    </div>
+                    <div id="anuncios">
+                        <div class="funções_informações">
+                            <h3>Gerenciamento de Anúncios</h3>
+                            <img src="" alt="">
+                        </div>
+                        <p>Gerencie quais anúncios você deseja que apareça aqui</p>
+                    </div>
+                    <div id="contatos">
+                        <div class="funções_informações">
+                            <h3>Contatos bloqueados</h3>
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div id="termos">
+                        <div class="funções_informações">
+                            <h3>Termos de Serviço da TriboFit</h3>
+                            <img src="" alt="">
+                        </div>
+                        <p>Leia os Termos de Serviço da TriboFit</p>
+                    </div>
+                </div> <!-- informacoes -->    
+            </div> <!-- privacidade - container -->
+
+        </section> <!--Privacidade - end-->
+
+        <section id="segurança"> <!--Segurança - start-->
+            <div class="titulo_container">
+                <img src="{% static 'img/Icones/Settings/Segurança.png' %}" alt="Foto_Segurança_png">
+                <h2>Segurança</h2>
+            </div>
+            <div id="container-seguranca" class="containers">
+                <div class="informações" id="informações_segurança">
+                    <div id="rdf-senha">
+                        <div class="funções_informações">
+                            <h3>Redefinir Senha</h3>
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div id="aparelhos">
+                        <div class="funções_informações">
+                            <h3>Aparelhos Conectados</h3>
+                            <img src="" alt="">
+                        </div>
+                        <P>Saiba em quais aparelhos sua conta está logada</P>
+                    </div>
+                    <div id="authenticacao">
+                        <div class="funções_informações">
+                            <h3>Authenticação de dois fatores</h3>
+                            <img src="" alt="">
+                        </div>
+                        <P>Deixe sua conta mais segura, proteja-a colocando duas camadas de segurança</P>
+                    </div>
+                </div> <!-- info - seguranca -->
+            </div>
+        </section> <!--Segurança - end-->
+
+        <section id="aparencia">
+            <div class="titulo_container">
+                <img src="{% static 'img/Icones/Settings/Aparência.png' %}" alt="Foto_Aparência_png">
+                <h2>Aparência</h2>
+            </div>
+            <div id="container-aparencia" class="containers">
+                <div class="informações" id="informações_aparencia">
+                    <div>
+                        <input type="radio" name="aparencia">
+                        <label for="claro">Claro</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="aparencia">
+                        <label for="escuro">Escuro</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="aparencia">
+                        <label for="auto">Automático</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="acessibilidade"> <!-- Acessibilidade -->
+            <div class="titulo_container">
+                <img src="{% static 'img/Icones/Settings/Acessibilidade.png' %}" alt="Foto_Acessibilidade_png">
+                <h2>Acessibilidade</h2>
+            </div>
+            <div id="container-acessibilidade" class="containers">
+                <div class="informações" id="informações_acessibilidade">
+                    <div>
+                        <div class="funções_informações">
+                            <h3>Ajustar tamanho da fonte </h3>
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="funções_informações">
+                            <h3>Efeitos Visuais</h3>
+                            <img src="" alt="">
+                        </div>
+                        <p>Configure as animações, transparência e entres outros aspectos visuais.</p>
+                    
+                    </div>
+                    <div>
+                        <div class="funções_informações">
+                            <h3>Cores</h3>
+                            <img src="" alt="">
+                        </div>
+                        <p>Altere as configurações das cores, como: contraste, saturação, temperatura...</p>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- Acessibilidade - end -->
+
+        <section id="idioma"> <!-- idioma -->
+            <div class="titulo_container">
+                <img src="{% static 'img/Icones/Settings/Idioma.png' %}" alt="Foto_Idioma_png">
+                <h2>Idioma</h2>
+            </div>
+            <div id="container-idioma" class="containers">
+                <div class="informações" id="informações_idioma">
+                    <h3>Português Brasil</h3>
+                    <button>Mudar Idioma</button>
+                </div>
+            </div>
+
+        </section> <!-- Idioma - end -->
+
+        <section id="sobre"> <!-- Sobre -->
+            <div class="titulo_container">
+                <img src="{% static 'img/Icones/Settings/Sobre.png' %}" alt="Foto_Sobre_png">
+                <h2>Sobre</h2>
+            </div>
+            <div id="container-sobre" class="containers">
+                <div class="informações" id="informações_sobre">
+                    <p>Bem-vindo à TriboFit, a rede social criada para conectar pessoas apaixonadas pelo universo fitness! Aqui, você encontra um espaço para trocar experiências, tirar dúvidas e acessar conteúdos exclusivos sobre saúde e bem-estar. Contamos com profissionais de diferentes regiões e serviços pensados para ajudar você a alcançar uma vida mais saudável de forma prática e inspiradora. Faça parte da nossa tribo e transforme sua rotina!</p>
+                </div>
+            </div>
+        </section> <!-- Sobre - end -->
+
+        <Section id="ajuda">
+            <div class="titulo_container">
+                <img src="{% static 'img/Icones/Settings/Ajuda.png' %}" alt="Foto_Ajuda_png">
+                <h2>Ajuda</h2>
+            </div>
+            <div id="container-ajuda" class="containers">
+                <div class="informações" id="informações_ajuda">
+                    
+                </div>
+            </div>
+        </Section>
+    </main>
+
+    <nav id="SideBar_Settings">
+        
+    </nav>
 </body>
 </html>

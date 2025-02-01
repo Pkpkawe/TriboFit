@@ -19,7 +19,7 @@ from django.urls import path, include
 from .views import IndexHTML
 
 urlpatterns = [
-    path('', IndexHTML, name="IndexHTML"),
-    path('admin/', admin.site.urls),
-    path('User/', include('User.urls'))
+    path('', IndexHTML, name="IndexHTML"), # Url Principal do TriboFit
+    path('admin/', admin.site.urls), # Url Principal do Admin
+    path('User/', include('User.urls')) # Url Principal da API User
 ]

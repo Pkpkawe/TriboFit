@@ -1,0 +1,206 @@
+@import url('/static/css/style.css');
+@import url('/static/css/User/styleUser.css');
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 56%;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 45px;
+        width: 90%;
+        gap: 8px;
+
+        .titulo_container {
+            display: flex;
+            gap: 8px;
+
+            img {
+                color: white;
+            }
+        }
+
+        .containers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            border: solid 2px black;
+            border-radius: 10px;
+
+            .informações {
+                display: flex;
+                flex-direction: column;
+                width: 84%;
+                margin: 5% 0%;
+                gap: 25px;
+
+                .funções_informações {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+
+                    h3 {
+                        margin: 0;
+                    }
+
+                    img {
+                        align-self: flex-end;
+                    }
+                }
+            }
+
+            #informações_conta {
+                div {
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        font-size: 20px;
+                    }
+
+                    input {
+                        background-color: #D9D9D9;
+                        height: 40px;
+                        border: solid 0px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+            #informações_aparencia {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                
+            }
+
+            #informações_sobre {
+                p {
+                    text-align: justify;
+                }
+            }
+        }
+    }
+
+    #conta {
+        margin: 20px;
+    }
+}
+
+#SideBar_Settings {
+    position: fixed;
+    display: flex;
+    align-self: flex-end;
+    background-color: var(--Cor_1);
+    width: 22%;
+    height: 100%;
+    box-shadow: 2px 0px 10px 0px;
+}
+
+
+
+/* Seção de conta */
+
+/* #conta{
+    height: 611px;
+    width: 64%;
+
+    #container-conta{
+        height: 563px;
+        width: 100%;
+        
+        #informacoes{
+            height: 471px;
+            width: 564px;
+
+            
+        }
+    }
+} */
+
+/* ---------------------------------------- */
+
+/* Seção de privacidade */
+
+/* #privacidade{
+    height: 423px;
+    width: 666px;
+    #container-privacidade{
+        height: 375px;
+        width: 666px;
+        
+        #info-privacidade{
+            height: 261px;
+            width: 548px;
+
+            #dados{
+                height: 48px;
+                width: 548px;
+            }
+
+            #anuncios{
+                height: 48px;
+                width: 548px;
+            }
+
+            #contatos{
+                height: 24px;
+                width: 548px;
+            }
+
+            #termos{
+                height: 48px;
+                width: 548px;
+            }
+        }
+    }
+}  */
+
+/* ---------------------------------------- */
+
+/* seção de segurança */
+/* #segurança{
+    height: 344px;
+    width: 666px;
+
+    #container-seguranca{
+        height: 296px;
+        width: 666px;
+
+        #info-seguranca{
+            height: 199px;
+            width: 548px;
+
+            #rdf-senha{
+                height: 24px;
+                width: 548px;
+            }
+
+            #aparelhos{
+                height: 48px;
+                width: 548px;
+            }
+
+            #authenticacao{
+                height: 65px;
+                width: 548px;
+            }
+        }
+    }
+} */
+
+/* ---------------------------------------- */
+
+/* seção de privacidade */
+
+/* #aparencia{
+    
+} */
+

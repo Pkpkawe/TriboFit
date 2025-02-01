@@ -4,25 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/User/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/User/HomePage.css' %}">
     <link rel="shortcut icon" href="{% static 'img/Logo_Icone.ico' %}" type="image/x-icon">
     <title>TriboFit</title>
 </head>
 <body>
-    <main>
-
-        {% include 'Componentes/NavUser.html' %}
-        
-        <section>
-            <header>
-                <h1><img src="{% static 'img/Logo.png' %}" alt="Logo">TriboFit</h1>
-                <hr>
-                <img id="Notification" src="{% static 'img/Icones/Conteúdo/Notification.png' %}" alt="Notificação">
-            </header>
-        </section>
-
+    {% include 'Componentes/NavUser.html' %} <!-- Navegação Lateral -->
+    
+    <main> <!-- Conteúdo Principal -->
+        <header> <!-- Cabeçalho Página -->
+            <h1><img src="{% static 'img/Logo.png' %}" alt="Logo">TriboFit</h1> <!-- Nome do Site -->
+            <hr>
+            <img id="Notification" src="{% static 'img/Icones/Conteúdo/Notification.png' %}" alt="Notificação"> <!-- Logo do Site -->
+        </header>
     </main>
-
 </body>
 </html>

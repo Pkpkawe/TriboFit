@@ -1,0 +1,21 @@
+@import url('/static/css/style.css');
+@import url('/static/css/User/styleUser.css');
+
+.perfil{
+    margin: 10px;
+    border: solid 1px black;
+    border-radius: 15px;
+    .perfil1{
+        margin: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .perfil2{
+        margin: 30px;
+    }
+}
+
+.perfil2{
+    display: flex;
+    justify-content: space-evenly;
+}

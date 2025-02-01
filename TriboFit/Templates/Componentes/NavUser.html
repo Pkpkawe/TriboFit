@@ -1,14 +1,22 @@
 {% load static %}
-<nav>
+<nav id="SideBar_Principal">
     <ul>
-        <li id="Home"> <img src="{% static 'img/Icones/Nav/Home.png' %}" alt="Início"> <p>Início</p> </li>
-        <li> <img src="{% static 'img/Icones/Nav/Explorer.png' %}" alt="Explorar"> <p>Explorar</p> </li>
-        <li> <img src="{% static 'img/Icones/Nav/Message.png' %}" alt="Mensagens"> <p>Mensagens</p> </li>
-        <li> <img src="{% static 'img/Icones/Nav/Create.png' %}" alt="Criar"> <p>Criar</p> </li>
-        <li> <img src="{% static 'img/Icones/Nav/Perfil.png' %}" alt="Perfil"> <p>Perfil</p> </li>
-        <li> <img src="{% static 'img/Icones/Nav/Logo.png' %}" alt="Serviços"> <p>Serviços</p> </li>
+        <li id="Home"> <a href="/User/Home/">
+            <img src="{% static 'img/Icones/SideBar_Principal/Home.png' %}" alt="Início"> <p>Início</p></a> </li>
+        <li> <a href="/User/Explorer/">
+            <img src="{% static 'img/Icones/SideBar_Principal/Explorer.png' %}" alt="Explorar"> <p>Explorar</p></a> </li>
+        <li> <a href="/User/Message">
+            <img src="{% static 'img/Icones/SideBar_Principal/Message.png' %}" alt="Mensagens"> <p>Mensagens</p></a> </li>
+        <li> <a href="/User/Create">
+            <img src="{% static 'img/Icones/SideBar_Principal/Create.png' %}" alt="Criar"> <p>Criar</p></a> </li>
+        <li> <a href="/User/Perfil">
+            <img src="{% static 'img/Icones/SideBar_Principal/Perfil.png' %}" alt="Perfil"> <p>Perfil</p></a> </li>
+        <li> <a href="/User/Services">
+            <img src="{% static 'img/Icones/SideBar_Principal/Logo.png' %}" alt="Serviços"> <p>Serviços</p></a> </li>
         <li id="Settings"> 
-            <div><img src="{% static 'img/Icones/Nav/Settings.png' %}" alt="Configurações"> <p>Configurações</p></div> 
+            <a href="/User/Settings">
+                <div><img src="{% static 'img/Icones/SideBar_Principal/Settings.png' %}" alt="Configurações"> <p>Configurações</p></div> 
+            </a>
         </li>
     </ul>
 </nav>

@@ -5,5 +5,5 @@ from rest_framework.response import Response
 from rest_framework import status
 
 @api_view(['GET'])
-def IndexHTML(request):
+def IndexHTML(request): # Função para redirecionar para a Api User
     return redirect('/User')

@@ -1,17 +1,4 @@
-@charset "UTF-8";
-
-:root {
-    --Cor_1: #1A1A1A;
-    --Cor_2: #0E8F15;
-    --Cor_3: #29C31B;
-    --Cor_4: #40D232;
-    --Cor_5: #5ED653;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
+@import url('/static/css/style.css');
 
 body {
     display: flex;

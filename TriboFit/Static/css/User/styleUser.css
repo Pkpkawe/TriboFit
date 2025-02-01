@@ -1,0 +1,72 @@
+@import url('/static/css/style.css');
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    #SideBar_Principal {
+        position: fixed;
+        display: flex;
+        background-color: var(--Cor_1);
+        width: 22%;
+        height: 100%;
+        box-shadow: 2px 0px 10px 0px;
+        
+    
+        ul {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+    
+            li {
+                display: flex;
+                flex: 1 1 auto;
+                align-items: center;
+                list-style-type: none;
+
+                a {
+                    display: flex;
+
+                    img {
+                        width: 30px;
+                    }
+                    
+                    p {
+                        align-self: center;
+                        color: white;
+                        margin-left: 14px;
+                        font-size: 20px;
+                    }
+                }
+                
+            }
+
+            #Settings {
+                position: relative;
+                bottom: 20px;
+                align-items: flex-end;
+                flex: 4 1 auto;
+
+                a {
+                    div {
+                        display: flex; 
+                        justify-content: center;
+                        
+                        p {
+                            align-self: center;
+                        }
+                    }
+                }
+                
+
+                
+            }
+        }
+    
+    }
+
+    main {  
+        align-self: flex-end;
+        width: 78%;
+    }
+}
