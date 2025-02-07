@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
@@ -8,23 +8,13 @@ from .serializers import TheUserSerializer
 import json
 import bcrypt
 from .jwt_helpers import criar_jwt, verificar_jwt
+from .functions_auxiliaries import Procurar_User
 
 # Create your views here.
 
 @api_view(['GET'])
-def Validar_Token(request): # Validação de um Cookie
-    token = request.COOKIES.get('authCookie') # Procura o Cookie "authCookie"
-    
-    if not token: # Caso não Existir o Cookie Retorna a Página de Cadastro e Login
-        return render(request, 'TriboFit/index.html')
-
-    try: # Caso o Cookie exista
-        payload = verificar_jwt(token) # É verificado se é válido
-        user = TheUser.objects.get(id=payload.get('TheUser_ID')) # Se for válido procura o usuário
-        if user: # Se o usuário Existir Retorna a Página de Início
-            return redirect('/User/Home')
-    except Exception:
-        return render(request, 'TriboFit/index.html')
+def TriboFitHTML(request):
+    return render(request, 'TriboFit/index.html')
     
 @api_view(['POST'])
 def Cadastrar_User(request): # Função para Cadastrar Usuário
@@ -43,7 +33,9 @@ def Cadastrar_User(request): # Função para Cadastrar Usuário
 
         token = criar_jwt(user.id) # Cria um Token para o Usuário
         response = JsonResponse({'message': 'Cadastro bem-sucedido',
-                                 'Dados': user_cadastro.data}, status=status.HTTP_201_CREATED)
+                                 'Dados': user_cadastro.data}, 
+                                 status=status.HTTP_201_CREATED)
+        
         response.set_cookie( # Envia o Cookie para Navegador do Usuário
             'authCookie',
             token,
@@ -57,7 +49,8 @@ def Cadastrar_User(request): # Função para Cadastrar Usuário
     
     return Response(user_cadastro.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['POST'])
+
+@api_view(['POST', 'GET'])
 def Entrar_User(request):
     data = json.loads(request.body)
     email = data.get('email')
@@ -87,15 +80,27 @@ def Entrar_User(request):
         
     except TheUser.DoesNotExist:
         return JsonResponse({'Error': 'Usuário não encontrado'}, status=status.HTTP_404_NOT_FOUND)
+    
+@api_view(['GET'])
+def Sair(request):
+    response = JsonResponse({'Cookie':'O Cookie foi removido'}, status=status.HTTP_200_OK)
+    response.delete_cookie('authCookie')
+    return response
 
 @api_view(['GET'])
 def HomePageHTML(request):
-    return render(request, 'User/HomePage.html')
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/HomePage.html', contexto)
 
 @api_view(['GET'])
 def SettingsPageHTML(request):
-    return render(request, 'User/SettingsPage.html')
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/SettingsPage.html', contexto)
 
 @api_view(['GET'])
 def PerfilPageHTML(request):
-    return render(request, 'User/PerfilPage.html')
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/PerfilPage.html', contexto)

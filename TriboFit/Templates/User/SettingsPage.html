@@ -15,18 +15,18 @@
         <section id="conta"> <!--Conta - start--> 
             <div class="titulo_container">
                 <img src="{% static 'img/Icones/Settings/Conta.png' %}" alt="Foto_Conta_png">
-                <h1>Conta</h1>
+                <h2>Conta</h2>
             </div>
             <div id="container-conta" class="containers"> <!--Container da conta-->
 
                 <div class="informações" id="informações_conta"> <!-- informacoes -->
                     <div>
                         <label for="Name"><strong>Nome:</strong></label>
-                        <input type="text" name="name">
+                        <input type="text" name="name" required placeholder="{{ user.name }}">
                     </div>
                     <div>
                         <label for="Email"><strong>Email:</strong></label>
-                        <input type="email" name="email" required min="8">
+                        <input type="email" name="email" required placeholder="{{ user.email }}">
                     </div>
                     <div>
                         <label for="Telephone"><strong>Telefone:</strong></label>
@@ -38,12 +38,10 @@
                     </div>
 
                     <div id="type-account"> <!--Tipo de conta-->
-                        <p>Tipo de conta:</p>
+                        <h3>Tipo de conta:</h3>
                         <div>
-                            <p>Normal</p>
-                        </div>
-                        <div>
-                            <p>Profissional</p>
+                            <button id="Normal_Account">Normal</button>
+                            <button id="Profissional_Account">Profissional</button>
                         </div>
                     </div> <!-- tipo de conta end -->
 
@@ -63,27 +61,27 @@
                     <div id="dados">
                         <div class="funções_informações">
                             <h3>Gerenciamento de Dados</h3>
-                            <img src="" alt="">
+                            <img src="{% static 'img/Icones/Settings/Ir_Icon.png' %}" alt="Ir_Icon_png">
                         </div>
                         <p>Controle quais dados devem ser usados para melhorar sua experiência.</p>
                     </div>
                     <div id="anuncios">
                         <div class="funções_informações">
                             <h3>Gerenciamento de Anúncios</h3>
-                            <img src="" alt="">
+                            <img src="{% static 'img/Icones/Settings/Ir_Icon.png' %}" alt="Ir_Icon_png">
                         </div>
                         <p>Gerencie quais anúncios você deseja que apareça aqui</p>
                     </div>
                     <div id="contatos">
                         <div class="funções_informações">
                             <h3>Contatos bloqueados</h3>
-                            <img src="" alt="">
+                            <img src="{% static 'img/Icones/Settings/Ir_Icon.png' %}" alt="Ir_Icon_png">
                         </div>
                     </div>
                     <div id="termos">
                         <div class="funções_informações">
                             <h3>Termos de Serviço da TriboFit</h3>
-                            <img src="" alt="">
+                            <img src="{% static 'img/Icones/Settings/Ir_Icon.png' %}" alt="Ir_Icon_png">
                         </div>
                         <p>Leia os Termos de Serviço da TriboFit</p>
                     </div>
@@ -102,20 +100,20 @@
                     <div id="rdf-senha">
                         <div class="funções_informações">
                             <h3>Redefinir Senha</h3>
-                            <img src="" alt="">
+                            <img src="{% static 'img/Icones/Settings/Ir_Icon.png' %}" alt="Ir_Icon_png">
                         </div>
                     </div>
                     <div id="aparelhos">
                         <div class="funções_informações">
                             <h3>Aparelhos Conectados</h3>
-                            <img src="" alt="">
+                            <img src="{% static 'img/Icones/Settings/Ir_Icon.png' %}" alt="Ir_Icon_png">
                         </div>
                         <P>Saiba em quais aparelhos sua conta está logada</P>
                     </div>
                     <div id="authenticacao">
                         <div class="funções_informações">
                             <h3>Authenticação de dois fatores</h3>
-                            <img src="" alt="">
+                            <img src="{% static 'img/Icones/Settings/Ir_Icon.png' %}" alt="Ir_Icon_png">
                         </div>
                         <P>Deixe sua conta mais segura, proteja-a colocando duas camadas de segurança</P>
                     </div>
@@ -156,21 +154,20 @@
                     <div>
                         <div class="funções_informações">
                             <h3>Ajustar tamanho da fonte </h3>
-                            <img src="" alt="">
+                            <img src="{% static 'img/Icones/Settings/Ir_Icon.png' %}" alt="Ir_Icon_png">
                         </div>
                     </div>
                     <div>
                         <div class="funções_informações">
                             <h3>Efeitos Visuais</h3>
-                            <img src="" alt="">
+                            <img src="{% static 'img/Icones/Settings/Ir_Icon.png' %}" alt="Ir_Icon_png">
                         </div>
                         <p>Configure as animações, transparência e entres outros aspectos visuais.</p>
-                    
                     </div>
                     <div>
                         <div class="funções_informações">
                             <h3>Cores</h3>
-                            <img src="" alt="">
+                            <img src="{% static 'img/Icones/Settings/Ir_Icon.png' %}" alt="Ir_Icon_png">
                         </div>
                         <p>Altere as configurações das cores, como: contraste, saturação, temperatura...</p>
                     </div>
@@ -218,7 +215,60 @@
     </main>
 
     <nav id="SideBar_Settings">
-        
+        <h1>Configurações</h1>
+
+        <ul>
+            <div id="Configurações_Conta">
+                <p>Conta</p>
+                <li id="Conta_SideBar"> <a href="#conta">
+                    <img src="{% static 'img/Icones/SideBar_Settings/Conta.png' %}" alt="Conta_SideBar"> <p>Conta</p></a>
+                </li>
+                <li id="Privacidade_SideBar"> <a href="#privacidade">
+                    <img src="{% static 'img/Icones/SideBar_Settings/Privacidade.png' %}" alt="Privacidade_SideBar"> <p>Privacidade</p></a>
+                </li>
+                <li id="Segurança_SideBar"> <a href="#segurança">
+                    <img src="{% static 'img/Icones/SideBar_Settings/Segurança.png' %}" alt="Segurança_SideBar"> <p>Segurança</p></a>
+                </li>
+            </div>
+
+            <div id="Configurações_Aplicativo">
+                <p>Configurações do Aplicativo</p>
+                <li id="Aparência_SideBar"> <a href="#aparencia">
+                    <img src="{% static 'img/Icones/SideBar_Settings/Aparência.png' %}" alt="Aparência_SideBar"><p>Aparência</p></a>
+                </li>
+                <li id="Acessibilidade_SideBar"> <a href="#acessibilidade">
+                    <img src="{% static 'img/Icones/SideBar_Settings/Acessibilidade.png' %}" alt="Acessibilidade_SideBar"><p>Acessibilidade</p></a>
+                </li>
+                <li id="Idioma_SideBar"> <a href="#idioma">
+                    <img src="{% static 'img/Icones/SideBar_Settings/Idioma.png' %}" alt="Idioma_SideBar"><p>Idioma</p></a>
+                </li>
+            </div>
+
+            <div id="Configurações_SessãoSuporte">
+                <p>Sessão e Suporte</p>
+                
+                <li id="Sobre_SideBar"> <a href="#sobre">
+                    <img src="{% static 'img/Icones/SideBar_Settings/Sobre.png' %}" alt="Sobre_SideBar"><p>Sobre</p></a>
+                </li>
+                <li id="Ajuda_SideBar"> <a href="#ajuda">
+                    <img src="{% static 'img/Icones/SideBar_Settings/Ajuda.png' %}" alt="Ajuda_SideBar"><p>Ajuda</p></a>
+                </li>
+                <li id="Sair_SideBar"> <a>
+                    <img src="{% static 'img/Icones/SideBar_Settings/Sair.png' %}" alt="Sair_SideBar"><p>Sair</p></a>
+                    
+                </li>
+                <script src="{% static 'js/User/SettingsSair.js' %}"></script>
+            </div>
+        </ul>
     </nav>
+
+    <section id="Sair">
+        <p>Deseja sair dessa conta?</p>
+        <div>
+            <button id="botao_sair">Sair</button>
+            <button id="botao_cancelar">Cancelar</button>
+        </div>
+    </section>
+
 </body>
 </html>

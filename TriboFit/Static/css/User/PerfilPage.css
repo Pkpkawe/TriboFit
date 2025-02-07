@@ -5,6 +5,9 @@
     margin: 10px;
     border: solid 1px black;
     border-radius: 15px;
+    .banner{
+        background-color: rgb(156, 245, 156);
+    }
     .perfil1{
         margin: 30px;
         display: flex;
@@ -12,6 +15,18 @@
     }
     .perfil2{
         margin: 30px;
+        section{
+            display: flex;
+        }
+    }
+    .seguidores{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+            section{
+                display: flex;
+                gap: 15px;
+            }
     }
 }
 

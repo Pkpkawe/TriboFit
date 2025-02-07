@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } catch (error) {
                 console.error('Erro na requisição:', error)
-
             }
         
 

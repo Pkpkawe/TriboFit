@@ -10,7 +10,7 @@
         <li> <a href="/User/Create">
             <img src="{% static 'img/Icones/SideBar_Principal/Create.png' %}" alt="Criar"> <p>Criar</p></a> </li>
         <li> <a href="/User/Perfil">
-            <img src="{% static 'img/Icones/SideBar_Principal/Perfil.png' %}" alt="Perfil"> <p>Perfil</p></a> </li>
+            <img src="{{ user.image_perfil.url }}" alt="Perfil"> <p>Perfil</p></a> </li>
         <li> <a href="/User/Services">
             <img src="{% static 'img/Icones/SideBar_Principal/Logo.png' %}" alt="Serviços"> <p>Serviços</p></a> </li>
         <li id="Settings"> 
