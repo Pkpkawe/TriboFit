@@ -1,0 +1,6 @@
+@import url('/static/css/User/styleServices.css');
+@import url('/static/css/User/styleUser.css');
+
+#Nav_Alimentos {
+    background-color: rgba(0, 0, 0, 0.75);
+}

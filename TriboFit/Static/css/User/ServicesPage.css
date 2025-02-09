@@ -1,0 +1,75 @@
+@import url('/static/css/User/styleServices.css');
+@import url('/static/css/User/styleUser.css');
+
+main {
+    section {
+        display: flex;
+        justify-content: space-around;
+        align-self: flex-end;
+        height: 86%;
+        width: 100%;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: center;
+            background-repeat: no-repeat;
+            text-decoration: none;
+            background-size: 100%;
+
+            color: white;
+            
+            height: 79.66%;
+            width: 24.92%;
+            
+            border: solid 0px;
+            border-radius: 10px;
+            
+            img {
+                position: relative;
+                top: 14%;
+                height: 27.2%;
+            }
+            
+            div {
+                position: relative;
+                top: 17%;
+                width: 85%;
+                text-align: center;
+
+                h2 {
+                    font-size: 20px;
+                }
+
+                p {
+                    position: relative;
+                    top: 5%;
+                    font-size: 15px;
+                    text-align: justify;
+                }
+            }
+        }
+
+        #Treino {
+            background-image: url('/static/img/Fundos/Serviços/Halteres_Foto.png');
+        }
+
+        #Alimentação {
+            background-image: url('/static/img/Fundos/Serviços/Alimentos_Foto.png');
+        }
+
+        #Profissionais {
+            background-image: url('/static/img/Fundos/Serviços/Profissional_Foto.png');
+        }
+    }
+    
+}
+
+header {
+    height: 14%;
+
+    div {
+        height: 100%;
+    }
+}

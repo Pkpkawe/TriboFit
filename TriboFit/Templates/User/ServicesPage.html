@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/User/ServicesPage.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/Logo_Icone.ico' %}" type="image/x-icon">
+    <title>TriboFit</title>
+</head>
+<body>
+    {% include 'Componentes/NavUser.html' %} <!-- Navegação Lateral -->
+    
+    <main> <!-- Conteúdo Principal -->
+        {% include 'Componentes/HeaderServices.html' %}
+
+        <section>
+            <a id="Treino" href="/User/Services/Treino/"> <!-- Seção Treino -->
+                <img src="{% static 'img/Icones/Serviços/Halteres.png' %}" alt="">
+
+                <div>
+                    <h2>Encontre o seu treino</h2>
+                    <p>Monte aqui uma ficha personalizada de treino ou encontre uma apropriada para você.</p>
+                </div>
+            </a>
+            <a id="Alimentação" href="/User/Services/Alimentos/"> <!-- Seção Alimentação -->
+                <img src="{% static 'img/Icones/Serviços/Food.png' %}" alt="">
+
+                <div>
+                    <h2>Monte a dieta ideal para você</h2>
+                    <p>Saiba quantas calorias você está ingerindo. Para quem deseja ganhar, perder ou até mesmo manter o peso. Aqui temos a tabela nutricional de alimentos que desejar.</p>
+                </div>
+            </a>
+            <a id="Profissionais" href="/User/Services/Profissionais/"> <!-- Seção Profissionais -->
+                <img src="{% static 'img/Icones/Serviços/Muscle.png' %}" alt="">
+
+                <div>
+                    <h2>Conheça profissionais</h2>
+                    <p>Personal trainer, nutricionista ou preparador físico. Encontre pessoas que lidem com a sua necessidade de forma profissional.</p>
+                </div>
+            </a>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@import url('/static/css/User/styleServices.css');
+@import url('/static/css/User/styleUser.css');
+
+header {
+    height: 14%;
+
+    div {
+        height: 100%;
+    }
+}

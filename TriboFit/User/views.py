@@ -87,6 +87,10 @@ def Sair(request):
     response.delete_cookie('authCookie')
     return response
 
+
+""" Renderização das Páginas """
+
+
 @api_view(['GET'])
 def HomePageHTML(request):
     user = Procurar_User(request)
@@ -94,13 +98,73 @@ def HomePageHTML(request):
     return render(request, 'User/HomePage.html', contexto)
 
 @api_view(['GET'])
-def SettingsPageHTML(request):
+def ExplorerPageHTML(request):
     user = Procurar_User(request)
     contexto = {'user': user}
-    return render(request, 'User/SettingsPage.html', contexto)
+    return render(request, 'User/ExplorerPage.html', contexto)
+
+@api_view(['GET'])
+def MessagePageHTML(request):
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/MessagePage.html', contexto)
+
+@api_view(['GET'])
+def CreatePageHTML(request):
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/CreatePage.html', contexto)
 
 @api_view(['GET'])
 def PerfilPageHTML(request):
     user = Procurar_User(request)
     contexto = {'user': user}
     return render(request, 'User/PerfilPage.html', contexto)
+
+@api_view(['GET'])
+def ServicesPageHTML(request):
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/ServicesPage.html', contexto)
+
+@api_view(['GET'])
+def Services_T_TreinoPageHTML(request):
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/Services/Services_T_TreinoPage.html', contexto)
+
+@api_view(['GET'])
+def Services_T_MinhasFichasPageHTML(request):
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/Services/Services_T_MinhasFichasPage.html', contexto)
+
+@api_view(['GET'])
+def Services_T_ExercíciosPageHTML(request):
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/Services/Services_T_ExercíciosPage.html', contexto)
+
+@api_view(['GET'])
+def Services_A_AlimentosPageHTML(request):
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/Services/Services_A_AlimentosPage.html', contexto)
+
+@api_view(['GET'])
+def Services_A_MinhaDietaPageHTML(request):
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/Services/Services_A_MinhaDietaPage.html', contexto)
+
+@api_view(['GET'])
+def Services_P_ProfissionaisPageHTML(request):
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/Services/Services_P_ProfissionaisPage.html', contexto)
+
+@api_view(['GET'])
+def SettingsPageHTML(request):
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/SettingsPage.html', contexto)
