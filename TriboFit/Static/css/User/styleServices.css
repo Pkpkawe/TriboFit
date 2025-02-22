@@ -1,13 +1,21 @@
 main {
     display: flex;
     height: 100vh;
+    
+    section {
+        display: flex;
+        height: 79.04624277456647%;
+        align-self: flex-end;
+    }
 }
 
 header {
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
     align-items: center;
     position: fixed;
+    z-index: 2;
     width: 78%;
     height: 20.95375722543353%;
     background-color: var(--Cor_1);

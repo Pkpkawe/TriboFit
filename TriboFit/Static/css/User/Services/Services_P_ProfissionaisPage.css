@@ -1,5 +1,21 @@
 @import url('/static/css/User/styleServices.css');
 @import url('/static/css/User/styleUser.css');
+@import url('/static/css/User/styleTextBusca.css');
+
+main {
+    display: flex;
+    height: 100vh;
+    
+    section {
+        width: 100%;
+        height: 86%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-self: flex-end;
+        overflow-x: hidden;
+    }
+}
 
 header {
     height: 14%;
@@ -8,3 +24,87 @@ header {
         height: 100%;
     }
 }
+
+#busca{
+    width: 50%;
+    max-width: 501px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+    #txt-busca {
+        padding-left: 10%;
+        width: 92%;
+        height: 50px; 
+    }
+
+    img {
+        width: 8%;
+    }
+}
+
+
+#pesquisa{
+    width: 91.33%;
+    height: 75px;
+    display: flex;
+    margin: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    button{
+        width: 201px;
+        height: 53px;
+        background-color: #FFC041; 
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        
+    }
+}
+
+#profissionais{
+    width: 91.33%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1%;
+    
+    
+
+    .card-prof{
+        width: 302px;
+        height: 157px;
+        border: 0;
+        border-radius: 10px;
+        background-image: linear-gradient(to right, black 50%, transparent);
+        background-color: rgba(0, 0, 0, 0.021);
+        padding: 0.5%;
+        box-sizing: border-box;
+        
+        p{
+            color: white;
+        }
+
+        h3{
+            color: white;
+            font-size: 90%;
+        }
+
+        .txt-card{
+            opacity: 80%;
+            width: 145px;
+            height: 157px;
+            border: 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+    }
+}
+

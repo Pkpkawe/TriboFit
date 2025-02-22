@@ -1,21 +1,21 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
+from django.core.files.storage import FileSystemStorage
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from .models import TheUser
 from .serializers import TheUserSerializer
-import json
-import bcrypt
 from .jwt_helpers import criar_jwt, verificar_jwt
 from .functions_auxiliaries import Procurar_User
+import json, bcrypt, requests, io
 
 # Create your views here.
 
-@api_view(['GET'])
-def TriboFitHTML(request):
-    return render(request, 'TriboFit/index.html')
+
+""" Cadastro e Login do Usuário e, Criação e remoção de Cookie"""
     
+
 @api_view(['POST'])
 def Cadastrar_User(request): # Função para Cadastrar Usuário
     data = request.data # Armazena os Dados Enviados
@@ -92,6 +92,10 @@ def Sair(request):
 
 
 @api_view(['GET'])
+def TriboFitHTML(request):
+    return render(request, 'TriboFit/index.html')
+
+@api_view(['GET'])
 def HomePageHTML(request):
     user = Procurar_User(request)
     contexto = {'user': user}
@@ -110,10 +114,24 @@ def MessagePageHTML(request):
     return render(request, 'User/MessagePage.html', contexto)
 
 @api_view(['GET'])
+def MessageConversationPageHTML(request):
+    user = Procurar_User(request)
+    contexto = {'user': user}
+    return render(request, 'User/MessageConversationPage.html', contexto)
+
+@api_view(['GET'])
 def CreatePageHTML(request):
     user = Procurar_User(request)
     contexto = {'user': user}
     return render(request, 'User/CreatePage.html', contexto)
+
+@api_view(['GET'])
+def CreateEditPageHTML(request):
+    user = Procurar_User(request)
+    id_user = str(user.id)
+
+    contexto = {'user': user, 'post_temp': f'/media/User/{id_user}/temp/post_temp'}
+    return render(request, 'User/CreateEditPage.html', contexto)
 
 @api_view(['GET'])
 def PerfilPageHTML(request):
@@ -168,3 +186,29 @@ def SettingsPageHTML(request):
     user = Procurar_User(request)
     contexto = {'user': user}
     return render(request, 'User/SettingsPage.html', contexto)
+
+
+""" Upload de Arquivos """
+
+@api_view(['POST'])
+def PreviewCreate(request):
+    user = Procurar_User(request)
+    id_user = str(user.id)
+
+    if request.FILES.get('image'):
+        image = request.FILES['image']
+
+        file = FileSystemStorage(location=f'media/User/{id_user}/temp/')
+        filename = file.save('post_temp', image)
+
+        return JsonResponse({'message': 'Arquivo salvo', 'url': f'/media/User/{id_user}/temp/post_temp', 'image': '{image}'})   
+
+    elif request.FILES.get('video'):
+        video = request.FILES['video']
+
+        file = FileSystemStorage(location=f'media/User/{id_user}/temp/')
+        filename = file.save('post_temp', video)
+
+        return JsonResponse({'message': 'Arquivo salvo', 'url': f'/media/User/{id_user}/temp/post_temp'})
+    
+    return redirect('/User/Create/')

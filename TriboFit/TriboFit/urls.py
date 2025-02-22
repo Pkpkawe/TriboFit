@@ -23,8 +23,11 @@ from .views import IndexHTML
 urlpatterns = [
     path('', IndexHTML, name="IndexHTML"), # Url Principal do TriboFit
     path('admin/', admin.site.urls), # Url Principal do Admin
-    path('User/', include('User.urls')) # Url Principal da API User
+    path('User/', include('User.urls')), # Url Principal da API User
+    path('Post/', include('Post.urls')), # Url Principal da API Post
+    path('Feeding/', include('Feeding.urls')), # Url Principal da API Feeding
+    path('Treining/', include('Treining.urls')), # Url Principal da API Treining
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT[0])
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

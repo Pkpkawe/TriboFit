@@ -1,6 +1,116 @@
 @import url('/static/css/User/styleServices.css');
 @import url('/static/css/User/styleUser.css');
+@import url('/static/css/User/styleTextBusca.css');
 
 #Nav_Alimentos {
     background-color: rgba(0, 0, 0, 0.75);
 }
+
+section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#busca{
+    align-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#txt-busca{
+    width: 45%;
+    max-width: 501px; 
+    height: 50px;
+    margin: 10px 0px;
+}
+
+#alimentos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 85%;
+
+    .alimento{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        background-color: #1A1A1A;
+        border: none;
+        border-radius: 10px;
+        gap: 0;
+        padding: 0 3%;
+        box-sizing: border-box;
+    
+        .txt-alimento{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            text-align: center;
+
+            h3{
+                color: white;
+            }
+        }
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            gap: 10px;  
+
+            div {
+                width: auto;
+                text-align: center;
+            }
+    
+            .porcao{
+                p{
+                    color: #CDC1C1;
+                }
+            }
+            
+            .caloria{
+                p{
+                    color: #87FF70;
+                }
+            }
+            .carbo{
+                p{
+                    color: #28FF7B;   
+                }
+            }
+            .prote{
+                p{
+                    color: #FF6666;
+                }
+            }
+            .gordura{
+                p{
+                    color: #FF33FF;
+                }
+            }
+            .fibra{
+                p{
+                    color: #915FD8;
+                }
+            }
+            .sodio{
+                p{
+                    color: #FFAE00;
+                }
+            }
+        }
+    }
+}
+
+
+

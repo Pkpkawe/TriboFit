@@ -22,19 +22,31 @@
                 <div class="informações" id="informações_conta"> <!-- informacoes -->
                     <div>
                         <label for="Name"><strong>Nome:</strong></label>
-                        <input type="text" name="name" required placeholder="{{ user.name }}">
+                        <div class="input_conta">
+                            <input type="text" name="Name" required placeholder="{{ user.name }}" disabled>
+                            <button></button>
+                        </div>
                     </div>
                     <div>
                         <label for="Email"><strong>Email:</strong></label>
-                        <input type="email" name="email" required placeholder="{{ user.email }}">
+                        <div class="input_conta">
+                            <input type="email" name="Email" required placeholder="{{ user.email }}" disabled>
+                            <button></button>
+                        </div>
                     </div>
                     <div>
                         <label for="Telephone"><strong>Telefone:</strong></label>
-                        <input type="tel" name="telephone">
+                        <div class="input_conta">
+                            <input type="tel" name="Telephone" placeholder="{{ user.telephone }}" disabled>
+                            <button></button>
+                        </div>
                     </div>
                     <div>
                         <label for="Date"><strong>Data de Nascimento:</strong></label>
-                        <input type="date">
+                        <div class="input_conta">
+                            <input type="date" name="Date" disabled>
+                            <button></button>
+                        </div>
                     </div>
 
                     <div id="type-account"> <!--Tipo de conta-->

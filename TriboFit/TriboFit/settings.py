@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'User',
+    'Post',
+    'Feeding',
+    'Treining',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'User.middlewares.ValidarToken',
+    'User.middlewares.PostTemp',
 ]
 
 ROOT_URLCONF = 'TriboFit.urls'
@@ -123,7 +127,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'Static']
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = [BASE_DIR / 'Media']
+MEDIA_ROOT = [BASE_DIR / 'Media'][0]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

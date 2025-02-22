@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/User/CreateEditPage.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/Logo_Icone.ico' %}" type="image/x-icon">
+    <title>TriboFit</title>
+</head>
+<body>
+    {% include 'Componentes/NavUser.html' %} <!-- Navegação Lateral -->
+    
+    <main> <!-- Conteúdo Principal -->
+        <form id="form">
+            <div id="conteudo">
+                
+            </div>
+            <div id="edit">
+                <div class="inputs">
+                    <label for="title">Título</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div class="inputs" id="inputDescription">
+                    <label for="description">Descrição</label>
+                    <input type="textarea" name="description" id="description">
+                </div>
+                <div class="inputs">
+                    <label for="tags">Tags</label>
+                    <input type="text" name="tags" id="tags">
+                </div>
+                <button id="button">Criar</button>
+            </div>
+        </form>
+        
+        <script src="{% static 'js/User/Criar.js' %}"></script>
+    </main>
+</body>
+</html>

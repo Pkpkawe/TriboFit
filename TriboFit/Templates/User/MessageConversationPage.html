@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/User/MessageConversationPage.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/Logo_Icone.ico' %}" type="image/x-icon">
+    <title>TriboFit</title>
+</head>
+<body>
+    {% include 'Componentes/NavUser.html' %} <!-- Navegação Lateral -->
+    
+    <main> <!-- Conteúdo Principal -->
+        <div id="conversa">
+            <section id="usuario">
+                <img src="{{  user.image_perfil.url }}" alt="Perfil image">
+                <h1>Usuário</h1>
+            </section>
+            <div id="mensagens">
+                <p class="cinza">Lorem da sdkdadmkma d</p>
+                <p class="cinza">lorems da dmkmam dakmdkam</p>
+
+                <p class="verde">Lorem da sdkdadmkma daaaaaaasas</p>
+                <p class="verde">Lorem da sdkdadmkma ddsasas</p>
+
+                <p class="cinza">Lorem da sdkdadmkma d</p>
+
+                <p class="verde">Lorem da sdkdadmkma d</p>
+
+                <p class="cinza">Lorem da sdkdadmkma dadasdasdas</p>
+                <p class="cinza">Lorem da sdkdadmkma d</p>
+
+                <p class="verde">Lorem da sdkdadmkma d</p>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Mensagem">
+                <button></button>
+            </div>
+        </div>
+        <section id="Bar_Functions">
+            
+        </section>
+    </main>
+
+    {% include 'Componentes/SideBarMessage.html' %}
+
+</body>
+</html>

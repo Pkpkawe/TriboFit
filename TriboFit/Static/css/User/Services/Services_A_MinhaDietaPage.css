@@ -4,3 +4,207 @@
 #Nav_MinhaDieta {
     background-color: rgba(0, 0, 0, 0.75);
 }
+
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#gasto-diario{
+    padding: 2.5%;
+    box-sizing: border-box;
+    width: 435px;
+    height: 325px;
+    background-color: #1A1A1A;
+    border: none;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    
+
+    #editar{
+        width: 100%;   
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+
+        h2{
+            color: white;
+        }
+        
+        div {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+
+            img {
+                width: 100%;
+            }
+
+            h2{
+                color: #CDC1C1;
+            }
+        }
+
+    }
+    #box{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+        .coluna{
+            height: 300px;
+            width: 150px;   
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            #consumiu{
+                h3{
+                    color: white;
+                }
+
+                p{
+                    color: #87FF70; 
+                }
+            }
+            
+            #carboidrato{
+                h3{
+                    color: #28FF7B;
+                }
+
+                p{
+                    color: white; 
+                }
+            }
+
+            #proteina{
+                h3{
+                    color:#FF6666;
+                }   
+            }
+
+            #gordura{
+                h3{
+                    color: #F3FF44;
+                }
+            }
+
+            #meta{
+                h3{
+                    color: white;
+                }
+
+                p{
+                    color: #87FF70;
+                }
+            }
+
+            #fibra{
+                h3{
+                    color:#915FD8;
+                }
+            }
+
+            #sodio{
+                h3{
+                    color: #FFAE00;
+                }
+            }
+
+        }
+
+
+    p{
+        color: white;
+
+    }
+}
+
+#gasto-semanal{
+    padding: 2.5%;
+    box-sizing: border-box; 
+    width: 435px;
+    height: 325px;
+    background-color: #1A1A1A;
+    border: none;
+    border-radius: 10px;
+    gap: 8%;
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        color: white;
+    }
+
+    #box{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+    
+    .coluna{
+        height: 300px;
+        width: 150px;   
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #consumiu2{
+        h3{
+            color: white;
+        }
+
+        p{
+            color: #87FF70; 
+        }
+    }
+    
+    #carboidrato2{
+        h3{
+            color: #28FF7B;
+        }
+
+        p{
+            color: white; 
+        }
+    }
+
+    #proteina2{
+        h3{
+            color:#FF6666;
+        }   
+    }
+
+    #gordura2{
+        h3{
+            color: #F3FF44;
+        }
+    }
+
+    #fibra2{
+        h3{
+            color:#915FD8;
+        }
+    }
+
+    #sodio2{
+        h3{
+            color: #FFAE00;
+        }
+    }
+    
+    p{
+        color: white;
+    }
+}
+

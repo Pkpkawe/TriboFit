@@ -12,7 +12,15 @@
     {% include 'Componentes/NavUser.html' %} <!-- Navegação Lateral -->
     
     <main> <!-- Conteúdo Principal -->
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <section>
+            <button id="addArquivos"><img src="{% static 'img/Icones/Create/Adicionar_Arquivos.png' %}" alt=""></button>
+            <button id="criar"><img src="{% static 'img/Icones/Create/Criar.png' %}" alt=""></button>
+            <button id="changeCamera"><img src="{% static 'img/Icones/Create/Trocar_Camera.png' %}" alt=""></button>
+        </section>
 
+        <script src="{% static 'js/User/CriarPost.js' %}"></script>
     </main>
 </body>
 </html>

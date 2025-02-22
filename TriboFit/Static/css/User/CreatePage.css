@@ -1,1 +1,48 @@
 @import url('/static/css/User/styleUser.css');
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+    
+    video {
+        width: 100%;
+        height: 100%;
+    }
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 200px;
+        width: 25%;
+        height: 12%;
+        position: fixed;
+        bottom: 5%;
+
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        #addArquivos {
+            height: 50%;
+        }
+
+        #criar {
+            height: 100%;
+        }
+
+        #changeCamera {
+            height: 50%;
+        }
+    }
+}

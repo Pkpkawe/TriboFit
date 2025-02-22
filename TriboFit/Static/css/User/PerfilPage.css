@@ -1,35 +1,107 @@
 @import url('/static/css/User/styleUser.css');
 
+.perfil_todo{
+    margin: 20px;
+}
+
 .perfil{
     margin: 10px;
-    border: solid 1px black;
+    border: solid 1px rgb(0, 0, 0);
     border-radius: 15px;
-    .banner{
-        background-color: rgb(156, 245, 156);
-    }
-    .perfil1{
-        margin: 30px;
+}
+    
+#perfil_info {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5% 2.5% 1.5% 2.5%;
+    gap: 40px;
+        #editar_perfil{
+            background-color: rgb(219, 219, 219);
+            border-radius: 17px;
+            padding: 15px;
+        }
+      
+    #perfil1{
+        display: flex;
+        flex-direction: column;
         display: flex;
         justify-content: space-between;
-    }
-    .perfil2{
-        margin: 30px;
-        section{
+        gap: 25px;
+
+        #banner{
+            width: 100%;
+            height: 257px;
+            background-color: rgb(76, 192, 95);
+        }
+        
+        img {
+            position: absolute;
+            top: 170px;
+            left: 27%;
+            width: auto;
+        }
+
+        section {
             display: flex;
+            justify-content: space-between;
+            margin-left: 235px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
-    .seguidores{
+
+    #perfil2{
+        margin-left: 2.35578231292517%;
+        margin-right: 10%;
+    }
+    #seguidores{
         display: flex;
         justify-content: space-between;
-        margin: 20px;
-            section{
-                display: flex;
-                gap: 15px;
-            }
+
+        section{
+            font-size: 20px;
+            display: flex;
+            gap: 15px;
+        }
     }
 }
 
-.perfil2{
-    display: flex;
-    justify-content: space-evenly;
+#perfil_posts{
+    width: auto;
+
+    #type_posts{
+        border: solid 0 black;
+        border-bottom-width: 1px;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 30px;
+        padding: 12px;
+            .topicos{
+                flex: 1;
+                text-align: center;
+                padding: 10px;
+                border-right: 1px solid black;
+            }
+            .topicos:last-child {
+                border-right: none;
+            }
+    }
+    .posts{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 20px;
+        gap: 30px;
+        margin: 40px
+        overflow: hidden;
+        .post{
+            padding: 60px;
+            width: 110px;
+            height: 150px;
+            background-color: rgb(207, 206, 206);
+        }
+    }
 }

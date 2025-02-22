@@ -1,6 +1,83 @@
 @import url('/static/css/User/styleServices.css');
 @import url('/static/css/User/styleUser.css');
+@import url('/static/css/User/styleTextBusca.css');
 
 #Nav_Exercícios {
     background-color: rgba(0, 0, 0, 0.75);
+}
+main {
+    overflow: hidden;
+    
+    section{
+        align-self: normal;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+        top: 25%;
+        gap: 20px;
+        overflow: scroll;
+        overflow-x: hidden;
+        margin: 0;
+    }
+}
+
+#busca{
+    width: 100%;
+    align-self: flex-start;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    
+}
+
+#txt-busca{
+    align-self: center;
+    width: 45%;
+    max-width: 501px;
+    height: 50px; 
+}
+
+#exercicios {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+
+    .exercicio{
+        width: 210px;
+        height: 290px;
+        border: 0;
+        border-radius: 10px;
+        background-color: violet;
+        margin-left: 3%;
+        display: flex;
+
+        .txt-exercicio{
+            display: flex;
+            flex-direction: column;
+            gap: 10%;
+            width: 210px;
+            height: 118px;
+            padding: 5%;
+            align-self: flex-end;
+            background-color: #000000;
+            opacity: 80%;
+            border: 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            h3{
+                color: white;
+                text-align: center;
+            }
+
+            p{
+                font-size: 10px;
+                text-align: justify;
+                color: white;
+            }
+        }
+    }
 }

@@ -6,8 +6,10 @@ body {
 
     #SideBar_Principal {
         position: fixed;
+        z-index: 3;
         display: flex;
         background-color: var(--Cor_1);
+        min-width: 230px;
         width: 22%;
         height: 100%;
         box-shadow: 2px 0px 10px 0px;
