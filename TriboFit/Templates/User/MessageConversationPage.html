@@ -12,38 +12,62 @@
     {% include 'Componentes/NavUser.html' %} <!-- Navegação Lateral -->
     
     <main> <!-- Conteúdo Principal -->
-        <div id="conversa">
+        <section id="Central">
             <section id="usuario">
-                <img src="{{  user.image_perfil.url }}" alt="Perfil image">
+                <img src="{{  user.image_perfil.url }}" alt="Perfil Image">
                 <h1>Usuário</h1>
             </section>
-            <div id="mensagens">
-                <p class="cinza">Lorem da sdkdadmkma d</p>
-                <p class="cinza">lorems da dmkmam dakmdkam</p>
-
-                <p class="verde">Lorem da sdkdadmkma daaaaaaasas</p>
-                <p class="verde">Lorem da sdkdadmkma ddsasas</p>
-
-                <p class="cinza">Lorem da sdkdadmkma d</p>
-
-                <p class="verde">Lorem da sdkdadmkma d</p>
-
-                <p class="cinza">Lorem da sdkdadmkma dadasdasdas</p>
-                <p class="cinza">Lorem da sdkdadmkma d</p>
-
-                <p class="verde">Lorem da sdkdadmkma d</p>
-            </div>
-            <div class="chat-input">
-                <input type="text" placeholder="Mensagem">
-                <button></button>
-            </div>
-        </div>
-        <section id="Bar_Functions">
-            
+            <hr>
+            <section id="mensagens">
+                <p class="cinza mensagem">Lorem da sdkdadmkma d</p>
+                <p class="cinza mensagem">lorems da dmkmam dakmdkam</p>
+                <p class="verde mensagem">Lorem da sdkdadmkma daaaaaaasas</p>
+                <p class="verde mensagem">Lorem da sdkdadmkma ddsasas</p>
+                <p class="cinza mensagem">Lorem da sdkdadmkma d</p>
+                <p class="verde mensagem">Lorem da sdkdadmkma d</p>
+                <p class="cinza mensagem">Lorem da sdkdadmkma dadasdasdas</p>
+                <p class="cinza mensagem">Lorem da sdkdadmkma d</p>
+                <p class="verde mensagem">Lorem da sdkdadmkma d</p>
+                <p class="verde mensagem">Lorem da sdkdadmkma d</p>
+                <p class="verde mensagem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste temporibus illum a numquam ex, reprehenderit, voluptate blanditiis alias eveniet dignissimos atque eius minima possimus optio saepe facere deserunt laudantium!</p>
+                <p class="cinza mensagem">Lorem da sdkdadmkma d</p>
+                <p class="cinza mensagem">Lorem da sdkdadmkma d</p>
+                <p class="verde mensagem">Lorem da sdkdadmkma d</p>
+                <p class="cinza mensagem">Lorem da sdkdadmkma d</p>
+                <p class="cinza mensagem">Lorem da sdkdadmkma d</p>
+            </section>
+            <script>
+                const BoxMenssaegm = document.getElementById('mensagens')
+                requestAnimationFrame(() => {
+                    BoxMenssaegm.scrollTop = BoxMenssaegm.scrollHeight
+                })
+            </script>
+            <hr>
+            <section id="Bar_Functions">
+                <button id="Anexar"><img src="{% static 'img/Icones/Messages/Anexar.png' %}" alt=""></button>
+                <button id="Camera"><img src="{% static 'img/Icones/Messages/Camera.png' %}" alt=""></button>
+                <input id="Mensagem_Input" type="text" placeholder="Mensagem">
+                <button id="Gravar_Enviar"><img id="Imagem_Gravar_Enviar" src="{% static 'img/Icones/Messages/Microfone.png' %}" alt=""></button>
+                <script>
+                    const input = document.getElementById('Mensagem_Input')
+                    const Gravar_Enviar = document.getElementById('Imagem_Gravar_Enviar')
+                    input.addEventListener('input', function(event) {
+                        if (event.target.value != '') {
+                            Gravar_Enviar.src = "{% static 'img/Icones/Messages/Enviar.png' %}"
+                            Gravar_Enviar.style.width = '45%'
+                        }
+                        else {
+                            Gravar_Enviar.src = "{% static 'img/Icones/Messages/Microfone.png' %}"
+                            Gravar_Enviar.style.width = '40%'
+                        }
+                    })
+                </script>
+            </section>
         </section>
+        
+        {% include 'Componentes/SideBarMessage.html' %}
     </main>
 
-    {% include 'Componentes/SideBarMessage.html' %}
 
 </body>
 </html>

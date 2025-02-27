@@ -2,32 +2,34 @@
 @import url('/static/css/User/styleMessage.css');
 
 body > main {
-    width: 56%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-self: center;
-
-    #Bar_Functions {
-        align-items: flex-end;
-    }
 } 
 
 main{
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    gap: 10px;
 
-    img {
-        width: 10%;
-        max-width: 75px;
+    #Central {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        gap: 10px;
+        
+
+        img {
+            width: 10%;
+            max-width: 75px;
+        }
+    
+        h1 {
+            font-size: 30px
+        }
     }
 
-    h1 {
-        font-size: 30px
-    }
 }

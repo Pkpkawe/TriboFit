@@ -26,7 +26,7 @@ urlpatterns = [
     path('User/', include('User.urls')), # Url Principal da API User
     path('Post/', include('Post.urls')), # Url Principal da API Post
     path('Feeding/', include('Feeding.urls')), # Url Principal da API Feeding
-    path('Treining/', include('Treining.urls')), # Url Principal da API Treining
+    path('Training/', include('Training.urls')), # Url Principal da API Treining
 ]
 
 if settings.DEBUG:

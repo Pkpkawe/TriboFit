@@ -46,3 +46,11 @@ main {
         }
     }
 }
+
+@media (max-width: 1015px) {
+    main {
+        section {
+            bottom: calc(5% + 60px);
+        }
+    }
+}

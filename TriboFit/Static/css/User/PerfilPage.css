@@ -15,11 +15,6 @@
     flex-direction: column;
     padding: 1.5% 2.5% 1.5% 2.5%;
     gap: 40px;
-        #editar_perfil{
-            background-color: rgb(219, 219, 219);
-            border-radius: 17px;
-            padding: 15px;
-        }
       
     #perfil1{
         display: flex;
@@ -33,12 +28,45 @@
             height: 257px;
             background-color: rgb(76, 192, 95);
         }
-        
-        img {
+
+        #image_perfil {
             position: absolute;
+            display: flex;
             top: 170px;
-            left: 27%;
-            width: auto;
+            left: calc(25% + 30px);
+            
+            #Imagem_PerfilInfo {
+                width: 213px;
+                aspect-ratio: 1 / 1;
+                border: solid 1px black;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            div {
+                display: none;
+                background-color: transparent;
+                position: relative;
+                right: 40px;
+                top: 20px;
+                height: 24px;
+                aspect-ratio: 1 / 1;
+
+                label {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                    }
+                }
+                
+                #edit_image_perfil {
+                    display: none;
+                }
+            }
         }
 
         section {
@@ -49,6 +77,34 @@
             div {
                 display: flex;
                 flex-direction: column;
+
+            }
+            #botoes_controle {
+                flex-direction: row;
+                gap: 15px;
+
+                .botoes_controle {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    border-radius: 17px;
+                    font-size: 16px;
+                    background-color: #dbdbdb;
+                    width: 105px;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+
+                #cancelar_editar{
+                    display: none;
+                }
+
+                #salvar {
+                    display: none;
+                    background-color: var(--Cor_3);
+                    color: white;
+                }
             }
         }
     }
@@ -56,7 +112,21 @@
     #perfil2{
         margin-left: 2.35578231292517%;
         margin-right: 10%;
+        width: 85%;
+
+        textarea {
+            
+            width: 100%;
+            color: black;
+            font-size: 16px;
+            resize: none;
+            border: none;
+            outline: none;
+            overflow: hidden;
+            background-color: transparent;
+        }
     }
+
     #seguidores{
         display: flex;
         justify-content: space-between;
@@ -95,7 +165,7 @@
         justify-content: space-evenly;
         padding: 20px;
         gap: 30px;
-        margin: 40px
+        margin: 40px;
         overflow: hidden;
         .post{
             padding: 60px;

@@ -3,15 +3,15 @@
     <ul>
         <li id="Home"> <a href="/User/Home/">
             <img src="{% static 'img/Icones/SideBar_Principal/Home.png' %}" alt="Início"> <p>Início</p></a> </li>
-        <li> <a href="/User/Explorer/">
+        <li id="Explorar"> <a href="/User/Explorer/">
             <img src="{% static 'img/Icones/SideBar_Principal/Explorer.png' %}" alt="Explorar"> <p>Explorar</p></a> </li>
-        <li> <a href="/User/Message">
+        <li id="Message"> <a href="/User/Message">
             <img src="{% static 'img/Icones/SideBar_Principal/Message.png' %}" alt="Mensagens"> <p>Mensagens</p></a> </li>
-        <li> <a href="/User/Create">
+        <li id="Create"> <a href="/User/Create">
             <img src="{% static 'img/Icones/SideBar_Principal/Create.png' %}" alt="Criar"> <p>Criar</p></a> </li>
-        <li> <a href="/User/Perfil">
-            <img src="{{ user.image_perfil.url }}" alt="Perfil"> <p>Perfil</p></a> </li>
-        <li> <a href="/User/Services">
+        <li id="Perfil"> <a href="/User/Perfil">
+            <img style="border-radius: 50%; object-fit: cover; aspect-ratio: 1 / 1;;" src="{{ user.Profile.image_perfil.url }}" alt="Perfil"> <p>Perfil</p></a> </li>
+        <li id="Services"> <a href="/User/Services">
             <img src="{% static 'img/Icones/SideBar_Principal/Logo.png' %}" alt="Serviços"> <p>Serviços</p></a> </li>
         <li id="Settings"> 
             <a href="/User/Settings">

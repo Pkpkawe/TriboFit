@@ -16,26 +16,43 @@
             <div class="perfil" id="perfil_info">
                 <section id="perfil1">
                     <div id="banner"></div>
-                    <img src="{{  user.image_perfil.url }}" alt="Perfil image">
+                    <div id="image_perfil">
+                        <img id="Imagem_PerfilInfo" src="{{ user.Profile.image_perfil.url }}" alt="Perfil image">
+                        <div id="input_file">
+                            <label for="edit_image_perfil"><img src="{% static 'img/Icones/Outros/Pincel_Editar.png' %}" alt="Pincel_Editar"></label>
+                            <input type="file" id="edit_image_perfil" name="edit_image_perfil" accept="image/*">
+                        </div>
+                    </div>
                     <section>
                         <div>
                             <h2>Nome</h2>
                             <p>@nome</p>
                         </div>
-                        <p id="editar_perfil">Editar perfil</p>
+                        <div id="botoes_controle">
+                            <button id="cancelar_editar" class="botoes_controle">Cancelar</button>
+                            <button id="salvar" class="botoes_controle">Salvar</button>
+                            <button id="editar" class="botoes_controle">Editar perfil</button>
+                        </div>
                     </section>
                 </section>
                 <section id="perfil2">
-                    <p>Sou apaixonado por treino e acredito que cada repetição é um passo rumo ao melhor de mim. Meu objetivo é motivar, compartilhar aprendizados e inspirar outras pessoas a se dedicarem à busca por saúde, força e bem-estar.</p>
-                    <p>🏋️ Hobby: Levantar pesos, ajustar técnicas e aprender mais sobre o universo fitness.</p>
+                    <textarea name="description" id="description" rows="1" oninput="ajustHeight(this)" maxlength="600" disabled>{{user.Profile.description}}</textarea>
+
+                    <script>
+                        function ajustHeight(textarea) {   
+                            textarea.style.height = 'auto'
+                            textarea.style.height = (textarea.scrollHeight)+"px"
+                        }
+                    </script>
                 </section>
                 <section id="seguidores">
                     <section>
-                        <p>0 Seguidores</p>
-                        <p>0 Seguindo</p>
+                        <p>{{followers}} Seguidores</p>
+                        <p>{{following}} Seguindo</p>
                     </section>
-                        <p>Tipo de conta</p>
+                        <p>{{user.Profile.type_account}}</p>
                 </section>
+                <script src="{% static 'js/User/PerfilEditar.js' %}"></script>
             </div>
 
             <div class="perfil" id="perfil_posts">

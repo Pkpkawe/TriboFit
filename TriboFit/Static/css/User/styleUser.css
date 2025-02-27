@@ -3,13 +3,13 @@
 body {
     display: flex;
     flex-direction: column;
+    height: 100vh;
 
     #SideBar_Principal {
         position: fixed;
         z-index: 3;
         display: flex;
         background-color: var(--Cor_1);
-        min-width: 230px;
         width: 22%;
         height: 100%;
         box-shadow: 2px 0px 10px 0px;
@@ -71,5 +71,67 @@ body {
     main {  
         align-self: flex-end;
         width: 78%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1015px) {
+    body {
+        flex-direction: row;
+        justify-content: center;
+
+        #SideBar_Principal {
+            align-self: flex-end;
+            width: 100%;
+            height: 60px;
+            justify-content: center;
+    
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 50%;
+                margin-left: 0;
+        
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    list-style-type: none;
+    
+                    a {
+                        display: flex;
+                        text-decoration: none;
+    
+                        img {
+                            width: 30px;
+                        }
+                        
+                        p {
+                            display: none;
+                        }
+                    }
+                    
+                } 
+
+                #Create {order: 2;}
+                #Perfil {order: 2;}
+                #Services {order: 1;}
+                
+                #Settings {
+                    order: 2;
+                    position: static;
+                    align-items: center;
+                    flex: none;
+                }
+            }
+        }
+    
+        main {
+            align-self: flex-start;
+            width: 100%;
+            height: calc(100% - 60px);
+            overflow: auto;
+        }
     }
 }

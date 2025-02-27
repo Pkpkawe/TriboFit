@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import Cadastrar_User, Entrar_User, TriboFitHTML, Sair, PreviewCreate
+from .views import Cadastrar_User, Entrar_User, TriboFitHTML, Sair, PreviewCreate, UpdatePerfil
 from .views import HomePageHTML, SettingsPageHTML, PerfilPageHTML, ServicesPageHTML, MessagePageHTML, ExplorerPageHTML, CreatePageHTML, Services_T_TreinoPageHTML, Services_T_MinhasFichasPageHTML, Services_T_ExercíciosPageHTML, Services_A_AlimentosPageHTML, Services_A_MinhaDietaPageHTML, Services_P_ProfissionaisPageHTML, CreateEditPageHTML, MessageConversationPageHTML
 
 urlpatterns = [
@@ -25,4 +25,5 @@ urlpatterns = [
     path('Settings/', SettingsPageHTML, name='SettingsPageHTML'),
 
     path('Create/PreviewCreate/', PreviewCreate, name='PreviewCreate'),
+    path('Perfil/Update/', UpdatePerfil, name='UpdatePerfil'),
 ]

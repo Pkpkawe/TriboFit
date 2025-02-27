@@ -14,17 +14,22 @@ from .serializers import PostSerializer
 def QuantPosts(ext, request):
     User = Procurar_User(request)
     last_object = User.Posts.last()
-    extension = ext.split('.')
+    
+    extension = ext.split('.')[-1]
 
     if last_object == None:
-        return f'1.{extension[-1]}'
+        return f'1.{extension}'
     else:
-        for id in range(1, (last_object.id)+2):
-            try:
-                id_buscar = Post.objects.get(id=id)
-            except Post.DoesNotExist:
-                print(f'{id}.{extension[-1]}')
-                return f'{id}.{extension[-1]}'
+        last_object_url = last_object.post.name.split('/')
+        number_object_post = (int(last_object_url[-1].split('.')[0]))+1
+        
+        return f'{number_object_post}.{extension}'
+        #for id in range(1, (last_object.id)+2):
+        #    try:
+        #        id_buscar = Post.objects.get(id=id)
+        #        print(f'{id}.{extension[-1]}')
+        #    except Post.DoesNotExist:
+        #        return f'{id}.{extension[-1]}'
             
 
 

@@ -2,94 +2,126 @@
 @import url('/static/css/User/styleMessage.css');
 
 body > main {
-    width: 56%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-self: center;
+    align-self: flex-end;
 
-    #Bar_Functions {
-        align-items: flex-end;
+}
+
+#Central {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    
+    hr {
+        width: 100%;
     }
 }
 
-#conversa{
-    font-family: Arial, sans-serif;
-    width: 100%;
+#usuario {
+    display: flex;
+    padding: 15px;
+    font-weight: bold;
+    gap: 10px;
+
+    img {
+        width: 41px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+    }
+    
+    h1{
+        align-self: flex-end;
+    }
+}
+
+#mensagens{
+    box-sizing: border-box;
+    padding: 15px;
     height: 100%;
-    margin: 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden auto;
+    
 
-        #usuario{
-            display: flex;
-            padding: 15px;
-            font-weight: bold;
-            border-bottom: 1px solid #ddd;
-            img{
-                width: 41px;
-                height: 41px;
-                border: 1px solid #ddd;
-                border-radius: 50%;
-                margin-right: 10px;
-            }
-            h1{
-                margin-top: 14px;
-            }
-        }
-        #mensagens{
-            box-sizing: border-box;
-            padding: 15px;
-            height: 100%;
+    .mensagem {
+        padding: 10px;
+        max-width: 40%;
+        margin: 5px 0;
+        border-radius: 17px;
+        color: white;
+        line-height: 22px;
+    }
+
+    .cinza{
+        background-color: rgb(103, 103, 103);
+        align-self: flex-start;
+    }
+
+    .verde{
+        background-color: var(--Cor_3);
+        align-self: flex-end;    
+    }
+}
+
+#Bar_Functions {
+    align-items: flex-end;
+    box-sizing: border-box;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: 9%;
+    gap: 7px;
+
+    input {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        background-color: #cecece;
+    }
+    
+    button {
+        background-color: transparent;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        
+        img {
             width: 100%;
-            display: flex;
-            flex-direction: column;
+        }
+    }
 
-            .cinza{
-                color: white;
-                background-color: rgb(103, 103, 103);
-                border-radius: 17px;
-                align-self: flex-start;
-                padding: 10px;
-                max-width: 80%;
-                margin: 5px 0;
-            }
+    #Gravar_Enviar {
+        background-color: var(--Cor_2);
+        aspect-ratio: 1 / 1;
+        align-items: flex-start;
+        justify-content: flex-start;
+        
+        img {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+        }
 
-            .verde{
-                color: white;
-                background-color: rgb(71, 171, 62);
-                border-radius: 17px;
-                display: flex;
-                align-self: flex-end; 
-                padding: 10px;
-                max-width: 80%;
-                margin: 5px 0;      
-            }
-        }
-        .chat-input {
-            display: flex;
-            padding: 10px;
-            border-top: 1px solid #ddd;
-            background-color: #fff;
-        }
-        .chat-input input {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            border-radius: 20px;
-            outline: none;
-            background-color: #f0f0f0;
-        }
-        .chat-input button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            margin-left: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
+    }
+}
+
+@media (max-width: 1015px) {
+    body > main {
+        align-self: flex-start;
+    }
 }

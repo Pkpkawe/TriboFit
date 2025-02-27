@@ -62,3 +62,19 @@
         }
     }
 }
+
+#Central {
+    width: calc(100% - (0.22 * 100vw));
+}
+
+@media (max-width: 1015px) {
+    #SideBar_Message {
+        z-index: 2;
+        height: calc(100% - 60px);
+        width: 25%;
+    }
+
+    #Central {
+        width: calc(100% - (0.25 * 100vw));
+    }
+}

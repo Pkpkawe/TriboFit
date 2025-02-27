@@ -1,14 +1,15 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
+from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from .models import TheUser
-from .serializers import TheUserSerializer
+from .models import TheUser, Profile
+from .serializers import TheUserSerializer, ProfileSerializer
 from .jwt_helpers import criar_jwt, verificar_jwt
 from .functions_auxiliaries import Procurar_User
-import json, bcrypt, requests, io
+import json, bcrypt, requests, io, os
 
 # Create your views here.
 
@@ -136,7 +137,7 @@ def CreateEditPageHTML(request):
 @api_view(['GET'])
 def PerfilPageHTML(request):
     user = Procurar_User(request)
-    contexto = {'user': user}
+    contexto = {'user': user, 'followers': user.Profile.myfollowers.count(), 'following': user.Profile.myfollowings.count()}
     return render(request, 'User/PerfilPage.html', contexto)
 
 @api_view(['GET'])
@@ -188,7 +189,7 @@ def SettingsPageHTML(request):
     return render(request, 'User/SettingsPage.html', contexto)
 
 
-""" Upload de Arquivos """
+""" Outras Funções """
 
 @api_view(['POST'])
 def PreviewCreate(request):
@@ -212,3 +213,33 @@ def PreviewCreate(request):
         return JsonResponse({'message': 'Arquivo salvo', 'url': f'/media/User/{id_user}/temp/post_temp'})
     
     return redirect('/User/Create/')
+
+@api_view(['PATCH'])
+def UpdatePerfil(request):
+    user = Procurar_User(request)
+    profile_id = user.Profile.id
+    data = request.data.copy()
+    print(user.Profile.image_perfil.name)
+    filePath = f'media/User/{user.id}/Image_Profile.{(user.Profile.image_perfil.name).split('.')[-1]}'
+    print(filePath)
+
+    if os.path.exists(filePath):
+        os.remove(filePath)
+
+    if request.FILES.get('image_perfil'):
+        file = request.FILES['image_perfil']
+        fileExtension = (file.name).split('.')[-1]
+        file.name = f'Image_Profile.{fileExtension}'
+        data['image_perfil'] = file
+
+    try:
+        profile = Profile.objects.get(id=profile_id)
+    except Profile.DoesNotExist:
+        return JsonResponse({'message': 'Perfil não encontrado'})
+    
+    serializer = ProfileSerializer(profile, data=data, partial=True)
+    print(serializer)
+    if serializer.is_valid():
+        serializer.save()
+        return JsonResponse({'message': 'Perfil atualizado'}, status=status.HTTP_200_OK)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

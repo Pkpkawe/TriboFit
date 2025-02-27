@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'User',
     'Post',
     'Feeding',
-    'Treining',
+    'Training',
 ]
 
 MIDDLEWARE = [
