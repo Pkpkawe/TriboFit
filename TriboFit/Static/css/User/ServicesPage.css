@@ -76,7 +76,7 @@ header {
         section {
             a {
                 div {
-                    top0%;
+                    top: 20%;
                     p {
                         display: none;
                     }
