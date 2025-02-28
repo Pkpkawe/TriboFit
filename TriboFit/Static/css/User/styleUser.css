@@ -87,26 +87,16 @@ body {
             justify-content: center;
     
             ul {
-                display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
                 width: 50%;
                 margin-left: 0;
         
                 li {
-                    display: flex;
                     flex-direction: row;
-                    align-items: center;
                     list-style-type: none;
     
                     a {
-                        display: flex;
-                        text-decoration: none;
-    
-                        img {
-                            width: 30px;
-                        }
-                        
                         p {
                             display: none;
                         }
@@ -131,7 +121,6 @@ body {
             align-self: flex-start;
             width: 100%;
             height: calc(100% - 60px);
-            overflow: auto;
         }
     }
 }

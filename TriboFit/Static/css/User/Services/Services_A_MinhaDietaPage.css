@@ -138,3 +138,9 @@ section{
     }
 }
 
+@media (max-width: 1015px) {
+    .gastos {
+        height: 65%;
+    }
+}
+

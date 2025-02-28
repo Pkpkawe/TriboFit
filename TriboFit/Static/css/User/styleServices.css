@@ -1,10 +1,11 @@
 main {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
     
     section {
         display: flex;
-        height: 79.04624277456647%;
+        height: 79%;
         align-self: flex-end;
     }
 }
@@ -14,10 +15,8 @@ header {
     flex-direction: column;
     align-self: flex-start;
     align-items: center;
-    position: fixed;
-    z-index: 2;
-    width: 78%;
-    height: 20.95375722543353%;
+    width: 100%;
+    height: 21%;
     background-color: var(--Cor_1);
     box-shadow: 0px 4px 10px;
 
@@ -26,7 +25,7 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 66.81379310344828%;
+        height: 67%;
 
         h1 {
             font-size: 50px;
@@ -43,7 +42,7 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 33.18620689655172%;
+        height: 33%;
         width: 100%;
 
         ul {
@@ -68,4 +67,10 @@ header {
     }
 
 
+}
+
+@media (max-width: 1015px) {
+    main {
+        height: calc(100% - 60px);
+    }
 }

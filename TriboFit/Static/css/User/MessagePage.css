@@ -9,27 +9,26 @@ body > main {
 main{
     display: flex;
     justify-content: center;
+}
 
-    #Central {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-self: flex-start;
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-        gap: 10px;
-        
-
-        img {
-            width: 10%;
-            max-width: 75px;
-        }
+#Central {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    gap: 10px;
     
-        h1 {
-            font-size: 30px
-        }
+
+    img {
+        width: 10%;
+        max-width: 75px;
     }
 
+    h1 {
+        font-size: 30px
+    }
 }

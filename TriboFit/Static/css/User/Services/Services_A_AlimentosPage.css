@@ -11,6 +11,9 @@ section{
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    padding: 15px;
+    gap: 15px;
+    overflow: hidden auto;
 }
 
 #busca{
@@ -24,7 +27,6 @@ section{
     width: 45%;
     max-width: 501px; 
     height: 50px;
-    margin: 10px 0px;
 }
 
 #alimentos{

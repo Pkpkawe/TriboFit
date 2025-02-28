@@ -13,13 +13,13 @@ main {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-self: flex-end;
         width: 100%;
-        position: relative;
-        top: 25%;
         gap: 20px;
         overflow: scroll;
         overflow-x: hidden;
-        margin: 0;
+        padding: 15px;
+        box-sizing: border-box;
     }
 }
 
@@ -43,7 +43,10 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    column-gap: 5px;
     row-gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
 
     .exercicio{
         width: 210px;
@@ -51,8 +54,9 @@ main {
         border: 0;
         border-radius: 10px;
         background-color: violet;
-        margin-left: 3%;
+        margin: auto;
         display: flex;
+        gap: 0;
 
         .txt-exercicio{
             display: flex;

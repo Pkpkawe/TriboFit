@@ -45,7 +45,7 @@ header {
 
 
 #pesquisa{
-    width: 91.33%;
+    width: 91%;
     height: 75px;
     display: flex;
     margin: 10px 0px;
@@ -67,14 +67,12 @@ header {
 }
 
 #profissionais{
-    width: 91.33%;
+    width: 91%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1%;
-    
-    
 
     .card-prof{
         width: 302px;
@@ -85,6 +83,7 @@ header {
         background-color: rgba(0, 0, 0, 0.021);
         padding: 0.5%;
         box-sizing: border-box;
+        margin: auto;
         
         p{
             color: white;

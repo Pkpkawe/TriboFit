@@ -26,7 +26,7 @@ main {
             img {
                 position: relative;
                 top: 14%;
-                height: 27.2%;
+                height: 27%;
             }
             
             div {
@@ -43,7 +43,7 @@ main {
                     position: relative;
                     top: 5%;
                     font-size: 15px;
-                    text-align: justify;
+                    line-height: 20px;
                 }
             }
         }
@@ -69,4 +69,20 @@ header {
     div {
         height: 100%;
     }
+}
+
+@media (max-width: 1015px) {
+    main {
+        section {
+            a {
+                div {
+                    top0%;
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    
 }
